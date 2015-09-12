@@ -1,0 +1,36 @@
+Timing Application:
+Programmer - Cameron Spencer 7/27/2015
+
+Description:
+Create a comprehensive counter library that utilizes a time based format (24 hours in a day, 60 minutes in an
+hour, 60 seconds in a minute, etc.). The counter may be initialized to any time and should handle for displays in both
+standard and military time. The smallest increment should be a second and the largest increment an hour, but ensure
+the implementation is easy to expand upon and handles for both positive and negative adjustments.
+Note that this project is NOT a clock, increments are not made “per second” and there should be no
+integration with any pre-existing system-time libraries. Increments can be made at any interval and to any logical
+boundary (hour, minute, or second), but MUST be limited to increments of one (i.e. in order to add two hours to the
+counter, hour must be incremented twice, or minute 120 times, or second 7200 times). Make sure to protect the
+code as best as possible to prevent circumvention of the intended functionality. 
+
+Implementation:
+printTime(self, timeType) -
+Prints the time of the Time class
+Prints with either the 12 hour clock or the 24 hour clock based off the timeType parameter (1=24hour 2=12hour)
+@return - returns a string of the 
+
+addSeconds(self, numSeconds) -
+Adds the numSeconds parameter to the Time class seconds variable
+If numSeconds is negative then numSeconds is subtracted from the Time class seconds variable
+If numSeconds is positive then numSeconds is added from the Time class seconds variable
+
+calculateSeconds(inputHour, inputMinute, inputSecond) -
+Calculates the number of seconds which are in the hours, minutes and seconds variables that are input as parameters
+@return - the total number of seconds calculated
+
+How to run (via Makefile):
+"make test" - runs unit tests on the functions found in timing.py
+"make clean" - removes the file created from the unit tests
+
+Language:			python
+Language version:	2.7.6
+IDE:				VIM

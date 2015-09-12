@@ -1,0 +1,33 @@
+Palindrome Checking Application
+Programmer - Cameron Spencer 8/8/2015
+
+Description:
+Part of this program is used to create a list of strings, half of which will be palindromes and half of which will not be. The program can be used to determine whether a given string is a palindrom.
+
+Implementation:
+def generateRand() -
+	@return a list of strings of characters (the string will emulate a word for testing)
+	To start, a list is created containing characters that can be used in each string created later in the application. (Characters include 0-9, A-Z and a-z)
+	Two random numbers are then created. The first is a random number between 1 and 5, which will determine the number of list elements (number of strings in the list). The second will determine the number of characters in each string (between 1 and 20).
+	To begin I decided to make every odd index in the list a palindrome and every even index in the list is a non-palindromes.
+	If the string is odd, I then populate the string with the number of characters equal to the random length variable divided by 2. The populated characters are chosen from a random index of the list of acceptable characters. If the randomLength variable is odd, then an additional character is added to the end of the string. I then substring the current string from 0 to the random length variable divided by 2. This will exclude the additional character at the end if there is one (if the string length is odd). I reverse this substring and append it to the end of the current string. This will give us a palindrome.
+	If the string is even, I then populate the string with the length of the random length variable. The populated characters are chosen from a random index of the list of acceptable characters. There is a chance that this string could be a palindrome, for example when a string is only one character.
+def isPalRec(word, left = None, right = None) -
+	@return true if word is a palindrome and false if it is not
+	This is a recursive function that is inicially called with just the "word" (string) that the user wants to test.
+	If the input parameters does not include the left and right bounds, the function will assign them to None and in the function they will again be changed to left = 0 and right = the length of the word minus 1. If left and right are assigned in the parameters then their values will not change in the function.
+	The function's 2 variables will be used to check the characters located in each vaiables index and compare their equality. If they are equal, the function will call itself with the left variable incramenting by +1 and the right variable incrementing by -1. This is done until the vaibles do not equal each other in which case the string is not a palindrome and False is returned or the variable left becomes greater or equal to the vaiable right in which case the string is a palindrome and True is returned.
+def isPalIter(word) -
+	@return true if word is a palindrome and false if it is not
+	This is a iterative function that is called with just the "word" (string) that the user wants to test.
+	The function uses two variables left and right. Left is set to 0 and right is set to the length of word minus 1. A while loop is then called each time making sure that the variable left is less than the vaiable right. Inside of the while loop, the variables left and right are compared and if the characters equal then the variables are incremented and the while loop continues. If the characters don't equal each other, then False is returned. If the while loop completes, then True is returned.
+
+Testing:
+	In order to test that the random words are palindromes, I used python's built-in function (list[::-1]), which reverses a word. I used this function to compare the original string to the string backwars (if the strings are equal, then the string is a palindrome).
+
+How to run (via Makefile):
+"make test" - runs unit tests on the functions found in palindrome.py
+
+Language:			python
+Language version:	2.7.6
+IDE:				VIM
