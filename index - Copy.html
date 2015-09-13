@@ -6,24 +6,32 @@
 
    	<link href="css_reset.css" rel="stylesheet">
 
-   	<link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+   	<link href="materialize/css/materialize.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   	<script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+   	<script src="materialize/js/materialize.min.js"></script>
 
    	<style>
+   		html {
+   			line-height: 1.5;
+   		}
+
    		h1 {
-			font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+			font-family: "Roboto", sans-serif;
 			font-size: 36px;
 			font-weight: 99;
    		}
    		h1#top {
-			font-family: Copperplate,Copperplate Gothic Light,fantasy;
+			font-family: "Roboto", sans-serif;
 			font-size: 48px;
 			font-weight: bold;
    		}
    		p {
-   			font-family: Tahoma,Verdana,Segoe,sans-serif;
+   			font-family: "Roboto", sans-serif;
    			font-size: 18px;
+   			line-height: 1.5;
+   		}
+   		#education {
+   			padding-bottom: 16px;
    		}
       	#map {
       		margin: 0 auto 0 auto;
@@ -38,18 +46,19 @@
     	}
     	hr {
     		border-color: #999999;
-    		width: 75%;
+    		width: 50px;
     		margin-top: 30px;
     		margin-bottom: 30px
-    	}
-    	hr#top {
-    		border-color: black;
-    		width: 100%;
     	}
     	h1 {
     		margin: 0 0 0 0;
     		padding: 0 0 0 0;
     		font-size: 30px;
+    	}
+    	h2 {
+    		margin: 0 0 36px 0;
+    		padding: 0 0 0 0;
+    		font-size: 24px;
     	}
     	#pNoSpace {
     		margin: 0 0 0 0;
@@ -71,62 +80,52 @@
     </script>
 
 </head>
-<body>
+<body style="background-color: #EDEDED !important">
 
 	<div class="container">
+
 		<div class="row">
-			<div class="col-lg-12" style="text-align:center">
+			<div class="col l12" style="text-align:center">
 				<h1 id="top">Cameron Spencer</h1>
-				<hr id="top">
 			</div>
+			<hr>
 		</div>
 
-
-		<!--
-		   - BASIC INFORMATION
-		   -->
+		<!-- Profile -->
 		<div class="row">
-			<div class="col-lg-4" style="text-align:center">
-				<img src="portrait.jpg" class="img-circle" alt="Cinque Terre" style="width: 350px; height: 350px;">
+			<div class="col l4">
+				<h2 style="text-align:center">Education</h2>
+          		<p style="text-align: center">
+					<img src="drexel.png" class="responsive-img" style="width:175px; height:175px; margin:20px">
+          		</p>
+          		<p id="pNoSpace">
+					Bachelor of Science in Computer Science, Anticipated Graduation 2018
+				</p>
+				<p id="pNoSpace">
+					GPA in Major: 3.37
+					Cumlative GPA: 3.08
+				</p>
 			</div>
-			<div class="col-lg-8">
-				<div class="col-lg-4">
-					<div style="margin-left: 7.5%">
-						<h1>
-							>> Personal
-						</h1>
-						<p id="pNoSpace">
-							Email:
-						</p>
-						<p id="pNoSpace">
-							cms588@drexel.edu
-						</p>
-						<p id="pNoSpace">
-							Phone:
-						</p>
-						<p id="pNoSpace">
-							484-753-1924
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-8">
-					<div style="margin-left: 7.5%" >
-						<h1>
-							>> Education
-						</h1>
-						<p  id="pNoSpace">
-							Drexel University
-						</p>
-						<p id="pNoSpace">
-							Bachelor of Science in Computer Science, Anticipated Graduation 2018
-						</p>
-						<p id="pNoSpace">
-							GPA in Major: 3.37
-							Cumlative GPA: 3.08
-						</p>
-					</div>
-				</div>
-				<div id="map" style="text-align:center"></div>
+			<div class="col l4">
+				<h2 style="text-align:center">Profile</h2>
+		      	<div class="card blue-grey darken-1">
+		        	<div class="card-content white-text" style="text-align: center">
+						<img src="portrait.jpg" class="circle responsive-img" style="width:175px; height:175px; margin:20px">
+		          		<p style="text-align: left">
+		          			"To improve is to change.
+		          			To be perfect is to change often."
+		          		</p>
+		          		<p style="text-align: right; margin-top: 10px">
+		          			-Winston Churchill
+		          		</p>
+		        	</div>
+		        	<div class="card-action" style="text-align:center">
+		          		<a href="https://www.linkedin.com/in/spencercameron">LinkedIn</a>
+		        	</div>
+		      	</div>
+		    </div>
+			<div class="col l4">
+				
 			</div>
 		</div>
 
@@ -137,7 +136,7 @@
 		<div class="row">
 			<hr>
 			<h1 style="text-align: center">Projects</h1>
-			<div class="col-lg-4" style="text-align:center">
+			<div class="col l4" style="text-align:center">
 				<a href="http://attilatothfitness.com/home/"><img src="site_attila.jpg"></a>
 				<p>
 				<p id="work">
@@ -147,7 +146,7 @@
 					World class model, Attila Toth, requested a website from myself and my team.
 				</p>
 			</div>
-			<div class="col-lg-4" style="text-align:center">
+			<div class="col l4" style="text-align:center">
 				<a href="http://etiennemaurice.com/"><img src="site_etienne.jpg"></a>
 				<p>
 				<p id="work">
@@ -157,7 +156,7 @@
 					Portfolio needed in under 24 hours. Rapid developement project.
 				</p>
 			</div>
-			<div class="col-lg-4" style="text-align:center">
+			<div class="col l4" style="text-align:center">
 				<a href="http://hashtagboost.com/"><img src="site_boost.jpg"></a>
 				<p>
 				<p id="work">
@@ -176,14 +175,14 @@
 		<div class="row">
 			<hr>
 			<h1 style="text-align: center">Work Experience</h1>
-			<div class="col-lg-6" style="text-align:center">
+			<div class="col l6" style="text-align:center">
 				<img src="work_audible2.png">
 				<p>
 				<p id="description">
 					CURRENTLY EMPLOYED.
 				</p>
 			</div>
-			<div class="col-lg-6" style="text-align:center">
+			<div class="col l6" style="text-align:center">
 				<img src="work_toll2.png">
 				<p>
 				<p id="work">
@@ -203,22 +202,11 @@
 		<div class="row">
 			<hr>
 			<h1 style="text-align: center">Sample Projects</h1>
-			<div class="col-lg-6" style="background-color: lightgreen; text-align:center">
+			<div class="col l6" style="background-color: lightgreen; text-align:center">
 				<p>Palindrome</p>
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						Dropdown
-						<span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
-				</div>
+
 			</div>
-			<div class="col-lg-6" style="background-color: lightblue; text-align:center">
+			<div class="col l6" style="background-color: lightblue; text-align:center">
 				<p>Timer</p>
 			</div>
 		</div>
@@ -229,14 +217,34 @@
 		<div class="row">
 			<hr>
 			<h1 style="text-align: center">Interests</h1>
-			<div class="col-lg-6" style="background-color: lightgreen; text-align:center">
+			<div class="col l6" style="background-color: lightgreen; text-align:center">
 				<p>Entrepeneurs</p>
 				<p>Philadelphia Youth Entrepeneurs</p>
 			</div>
-			<div class="col-lg-6" style="background-color: lightgreen; text-align:center">
+			<div class="col l6" style="background-color: lightgreen; text-align:center">
 				<p>Photography</p>
 			</div>
 		</div>
+
+
+
+		<div class="row">
+			<div class="col l12" style="text-align:center">
+				<h1 id="top">Cameron Spencer</h1>
+			</div>
+			<div class="col l6">
+				<p>
+					(484)753-1924
+				</p>
+			</div>
+			<div class="col l6">
+				<p style="text-align: right; margin-bottom: 16px">
+					cms588@drexel.edu
+				</p>
+			</div>
+			<div id="map" style="text-align:center"></div>
+		</div>
+
 
 	</div>
 
