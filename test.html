@@ -50,18 +50,22 @@
     	hr {
     		border-color: #999999;
     		width: 50px;
-    		margin-top: 30px;
-    		margin-bottom: 30px
+    		margin-top: 45px;
+    		margin-bottom: 45px
     	}
     	h1 {
     		margin: 0 0 0 0;
     		padding: 0 0 0 0;
-    		font-size: 30px;
+    		font-size: 34px;
+    		font-weight: bold;
     	}
     	h2 {
     		margin: 0 0 36px 0;
     		padding: 0 0 0 0;
-    		font-size: 24px;
+    		font-size: 26px;
+    	}
+    	li {
+   			line-height: 1.5;
     	}
     	#pNoSpace {
     		margin: 0 0 0 0;
@@ -70,16 +74,24 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: new google.maps.LatLng(39.956537, -75.189947),
-          zoom: 14,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+      	function initialize() {
+        	var mapCanvas = document.getElementById('map');
+        	var mapOptions = {
+          		center: new google.maps.LatLng(39.956537, -75.189947),
+          		zoom: 14,
+          		mapTypeId: google.maps.MapTypeId.ROADMAP
+        	}
+	        var map = new google.maps.Map(mapCanvas, mapOptions)
+      	}
+      	google.maps.event.addDomListener(window, 'load', initialize);
+
+
+		function myFunction(loc) {
+		    $('html,body').animate({
+		        scrollTop: $("#" + loc).offset().top
+		    },'slow');
+		}
+
     </script>
 
 </head>
@@ -89,10 +101,11 @@
 
 		<div class="row">
 			<div class="col l12" style="text-align:center">
-				<h1 id="top">Cameron Spencer</h1>
+				<h1 style="margin-top:15px;">Cameron Spencer</h1>
 			</div>
-			<hr>
 		</div>
+
+		<hr style="width:75%; margin-top:30px; margin-bottom:30px">
 
 		<!-- Profile -->
 		<div class="row">
@@ -121,7 +134,7 @@
 			</div>
 			<div class="col l4">
 				<h2 style="text-align:center">Profile</h2>
-		      	<div class="card blue-grey darken-1">
+		      	<div class="card blue-grey darken-2">
 		        	<div class="card-content white-text" style="text-align: center">
 						<img src="portrait.jpg" class="circle responsive-img" style="width:175px; height:175px; margin:20px">
 		          		<p style="text-align: left">
@@ -142,25 +155,35 @@
 					<h2 style="text-align:center">Current Jobs</h2>
 					<ul class="collapsible">
 						<li>
-							<div class="collapsible-header"><i class="large material-icons">work</i>Audible Inc.</div>
+							<div class="collapsible-header" onclick="myFunction('div_work')"><i class="large material-icons">work</i>Audible Inc.</div>
 							<p style="margin-left: 15px;font-size:15px">Software Developement Engineer</p>
+							<ul style="margin-left: 45px; margin-top: 10px; font-size:15px; list-style-type:circle">
+								<li>
+									&bull; Mobile developement??
+								</li>
+							</ul>
 						</li>
 						<li>
 							<div class="collapsible-header"><i class="large material-icons">assignment</i>Drexel University</div>
 							<p style="margin-left: 15px;font-size:15px">Computer Science Student</p>
+							<ul style="margin-left: 45px; margin-top: 10px; font-size:15px; list-style-type:circle">
+								<li>
+									&bull; Classes
+								</li>
+							</ul>
 						</li>
 						<li class="active">
-							<div class="collapsible-header"><i class="large material-icons">web</i>Freelance</div>
+							<div class="collapsible-header" onclick="myFunction('div_freelance')"><i class="large material-icons">web</i>Freelance</div>
 							<p style="margin-left: 15px;font-size:15px">Project Manager / Website Developer</p>
-							<ul style="margin-left: 30px; font-size:15px; list-style-type:circle">
+							<ul style="margin-left: 45px; margin-top: 10px; font-size:15px; list-style-type:circle">
 								<li>
-									Client Relations
+									&bull; Client Relations
 								</li>
 								<li>
-									Project Management
+									&bull; Project Management
 								</li>
 								<li>
-									Freelance Vision
+									&bull; Freelance Vision
 								</li>
 							</ul>
 						</li>
@@ -169,13 +192,13 @@
 			</div>
 		</div>
 
+		<hr>
 
 		<!--
 		   - Projects
 		   -->
-		<div class="row">
-			<hr>
-			<h1 style="text-align: center">Freelance</h1>
+		<div class="row" id="div_freelance">
+			<h2 style="text-align: center">Freelance</h2>
 			<div class="col l4" style="text-align:center">
 				<a href="http://attilatothfitness.com/home/"><img src="site_attila.jpg"></a>
 				<p>
@@ -208,13 +231,14 @@
 				</p>
 			</div>
 		</div>
+		
+		<hr>
 
 		<!--
 		   - Work Experience
 		   -->
-		<div class="row">
-			<hr>
-			<h1 style="text-align: center">Work Experience</h1>
+		<div class="row" id="div_work">
+			<h2 style="text-align: center">Work Experience</h2>
 			<div class="col l6" style="text-align:center">
 				<img src="work_audible2.png">
 				<p>
@@ -235,13 +259,13 @@
 			</div>
 		</div>
 
+		<hr>
 
 		<!--
 		   - Sample Projects
 		   -->
 		<div class="row">
-			<hr>
-			<h1 style="text-align: center">Sample Projects</h1>
+			<h2 style="text-align: center">Sample Projects</h2>
 			<div class="col l6" style="background-color: lightgreen; text-align:center">
 				<p>Palindrome</p>
 
@@ -251,12 +275,13 @@
 			</div>
 		</div>
 
+		<hr>
+
 		<!--
 		   - Interests
 		   -->
 		<div class="row">
-			<hr>
-			<h1 style="text-align: center">Interests</h1>
+			<h2 style="text-align: center">Interests</h2>
 			<div class="col l6" style="background-color: lightgreen; text-align:center">
 				<p>Entrepeneurs</p>
 				<p>Philadelphia Youth Entrepeneurs</p>
@@ -266,11 +291,11 @@
 			</div>
 		</div>
 
-
+		<hr>
 
 		<div class="row">
 			<div class="col l12" style="text-align:center">
-				<h1 id="top">Cameron Spencer</h1>
+				<h2 id="top">Contact Me</h2>
 			</div>
 			<div class="col l6">
 				<p>
