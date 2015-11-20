@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
 	<title>CMS Portfolio</title>
-
+  	
    	<link href="css_reset.css" rel="stylesheet">
+   	<link href="image_hover.css" rel="stylesheet">
 
-   	<link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   	<script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   	<link href="materialize/css/materialize.min.css" rel="stylesheet">
+   	<script src="materialize/js/materialize.min.js"></script>
 
    	<style>
+   		.container {
+   			width: 75%;
+   		}
+   		html {
+   			line-height: 1.5;
+   		}
+
    		h1 {
-			font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+			font-family: "Roboto", sans-serif;
 			font-size: 36px;
 			font-weight: 99;
    		}
    		h1#top {
-			font-family: Copperplate,Copperplate Gothic Light,fantasy;
+			font-family: "Roboto", sans-serif;
 			font-size: 48px;
 			font-weight: bold;
    		}
    		p {
-   			font-family: Tahoma,Verdana,Segoe,sans-serif;
-   			font-size: 18px;
+   			font-family: "Roboto", sans-serif;
+   			font-size: 15px;
+   			line-height: 1.5;
+   		}
+   		#education {
+   			padding-bottom: 16px;
    		}
       	#map {
       		margin: 0 auto 0 auto;
@@ -38,152 +54,222 @@
     	}
     	hr {
     		border-color: #999999;
-    		width: 75%;
-    		margin-top: 30px;
-    		margin-bottom: 30px
-    	}
-    	hr#top {
-    		border-color: black;
-    		width: 100%;
+    		width: 50px;
+    		margin-top: 45px;
+    		margin-bottom: 45px
     	}
     	h1 {
     		margin: 0 0 0 0;
     		padding: 0 0 0 0;
-    		font-size: 30px;
+    		font-size: 34px;
+    	}
+    	h2 {
+    		margin: 0 0 36px 0;
+    		padding: 0 0 0 0;
+    		font-size: 26px;
     	}
     	#pNoSpace {
     		margin: 0 0 0 0;
     		padding: 0 0 0 0;
     	}
+    	header {
+    		text-align: center;
+    		background-color:#ff8a80;
+    		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    	}
+    	.menu {
+    		text-align:center;
+    	}
+		.menu ul {
+			display:inline-table;
+		}
+		.menu ul li {
+			display:inline;
+		}
+		nav {
+			box-shadow: none;
+			background-color: inherit;
+		}
     </style>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: new google.maps.LatLng(39.956537, -75.189947),
-          zoom: 14,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+      	function initialize() {
+        	var mapCanvas = document.getElementById('map');
+        	var mapOptions = {
+          		center: new google.maps.LatLng(39.956537, -75.189947),
+          		zoom: 14,
+          		mapTypeId: google.maps.MapTypeId.ROADMAP
+        	}
+	        var map = new google.maps.Map(mapCanvas, mapOptions)
+      	}
+      	google.maps.event.addDomListener(window, 'load', initialize);
+
+
+		function myFunction(loc) {
+		    $('html,body').animate({
+		        scrollTop: $("#" + loc).offset().top
+		    },'slow');
+		}
+
     </script>
 
 </head>
-<body>
+<body style="background-color: #EDEDED !important">
 
-	<div class="container">
+
+	<header class="header z-depth-1">
+		<a href="https://www.linkedin.com/in/spencercameron"><img src="portrait.jpg" class="circle responsive-img" style="width:175px; height:175px; margin:20px"></a>
+		<h1>Cameron Spencer</h1>
+
+		          		<p style="text-align: center">
+		          			<br>
+		          			"To improve is to change.
+		          			To be perfect is to change often."
+		          		</p>
+		          		<p style="text-align: center; margin-top: 10px">
+		          			-Winston Churchill
+		          		</p>
+
+		<nav role="navigation">
+  			<div class="nav-wrapper container menu z-depth-0">
+    			<ul>
+      				<li><a href="about.html">About</a></li>
+      				<li><a href="privacy.html">Privacy</a></li>
+      				<li><a href="terms.html">Terms</a></li>
+    			</ul>
+  			</div>
+		</nav>
+	</header>
+
+
+	<div class="container" style="margin-top:45px">
+
+		<!-- Profile -->
 		<div class="row">
-			<div class="col-lg-12" style="text-align:center">
-				<h1 id="top">Cameron Spencer</h1>
-				<hr id="top">
+			<div class="col l4">
+				<h2 style="text-align:center">Education</h2>
+				<div style="margin-left: 25px; margin-right:25px">
+	          		<p style="text-align: center">
+						<img src="drexel.png" class="responsive-img" style="width:175px; height:175px; margin:20px">
+	          		</p>
+	          		<p id="pNoSpace">
+						Bachelor of Science in Computer Science
+					</p>
+					<p id="pNoSpace">
+						Anticipated Graduation 2018
+					</p>
+					<p>.
+					</p>
+					<p id="pNoSpace">
+						GPA:
+					</p>
+					<p id="pNoSpace">
+						Major: 3.37
+					</p>
+					<p id="pNoSpace">
+						Cumlative: 3.08
+					</p>
+				</div>
+			</div>
+			<div class="col l4" style="margin-top:">
+				<blockquote>
+					<p style="font-size:18px">
+				      	"Cameron is a quick learner, a team player and an exceptional individual contributor. He picked up all technologies very quickly- .NET , SQL or C# and produced positive results in a short time period."<br><br>
+				      	"Cameron also built good relationships at all levels and we had a couple of clients specially recognize Cameron for his initiative and related enhancements to software applications he worked on."<br><br>
+				      	<b>Vai Haridas<br>
+				      	IT Project Manager at Toll Brothers<b>
+			      	</p>
+			    </blockquote>
+			</div>
+			<div class="col l4" style="margin-top:">
+
+				<h2 style="text-align:center">Current Employment</h2>
+
+				<div class="col s12">
+					<ul class="collapsible">
+						<li>
+							<div class="collapsible-header" onclick="myFunction('div_work')"><i class="large material-icons">work</i>Audible Inc.</div>
+							<p style="margin-left: 15px;font-size:15px; line-height: 1; margin-top:12px">Software Developement Engineer</p>
+							<ul style="margin-left: 45px; margin-top: 10px; font-size:15px; list-style-type:circle">
+								<li>
+									&bull; Mobile developement??
+								</li>
+							</ul>
+						</li>
+						<br>
+						<li>
+							<div class="collapsible-header" onclick="window.open('http://www.drexel.edu/about/overview/','_newtab');"><i class="large material-icons">assignment</i>Drexel University</div>
+							<p style="margin-left: 15px;font-size:15px; line-height: 1; margin-top:12px">Computer Science Student</p>
+							<ul style="margin-left: 45px; margin-top: 10px; font-size:15px; list-style-type:circle;">
+								<li>
+									&bull; Classes
+								</li>
+							</ul>
+						</li>
+						<br>
+						<li class="active">
+							<div class="collapsible-header" onclick="myFunction('div_freelance')"><i class="large material-icons">web</i>Freelance</div>
+							<p style="margin-left: 15px;font-size:15px; line-height: 1; margin-top:12px">Project Manager / Website Developer</p>
+							<ul style="margin-left: 45px; margin-top: 10px; font-size:15px; list-style-type:circle;">
+								<li>
+									&bull; Client Relations
+								</li>
+								<li>
+									&bull; Project Management
+								</li>
+								<li>
+									&bull; Freelance Vision
+								</li>
+							</ul>
+							<br>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
-
-		<!--
-		   - BASIC INFORMATION
-		   -->
-		<div class="row">
-			<div class="col-lg-4" style="text-align:center">
-				<img src="portrait.jpg" class="img-circle" alt="Cinque Terre" style="width: 350px; height: 350px;">
-			</div>
-			<div class="col-lg-8">
-				<div class="col-lg-4">
-					<div style="margin-left: 7.5%">
-						<h1>
-							>> Personal
-						</h1>
-						<p id="pNoSpace">
-							Email:
-						</p>
-						<p id="pNoSpace">
-							cms588@drexel.edu
-						</p>
-						<p id="pNoSpace">
-							Phone:
-						</p>
-						<p id="pNoSpace">
-							484-753-1924
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-8">
-					<div style="margin-left: 7.5%" >
-						<h1>
-							>> Education
-						</h1>
-						<p  id="pNoSpace">
-							Drexel University
-						</p>
-						<p id="pNoSpace">
-							Bachelor of Science in Computer Science, Anticipated Graduation 2018
-						</p>
-						<p id="pNoSpace">
-							GPA in Major: 3.37
-							Cumlative GPA: 3.08
-						</p>
-					</div>
-				</div>
-				<div id="map" style="text-align:center"></div>
-			</div>
-		</div>
+		<hr>
 
 
-		<!--
-		   - Projects
-		   -->
-		<div class="row">
-			<hr>
-			<h1 style="text-align: center">Projects</h1>
-			<div class="col-lg-4" style="text-align:center">
+		<div class="grid">
+			<figure class="effect-bubba attila">
 				<a href="http://attilatothfitness.com/home/"><img src="site_attila.jpg"></a>
-				<p>
-				<p id="work">
-					QA
-				</p>
-				<p id="description">
-					World class model, Attila Toth, requested a website from myself and my team.
-				</p>
-			</div>
-			<div class="col-lg-4" style="text-align:center">
+				<figcaption>
+					<p>Bubba likes to appear out of thin air.</p>
+					<a href="#">View more</a>
+				</figcaption>			
+			</figure>
+			<figure class="effect-bubba etienne">
 				<a href="http://etiennemaurice.com/"><img src="site_etienne.jpg"></a>
-				<p>
-				<p id="work">
-					Business Analysis, Dev, QA
-				</p>
-				<p id="description">
-					Portfolio needed in under 24 hours. Rapid developement project.
-				</p>
-			</div>
-			<div class="col-lg-4" style="text-align:center">
+				<figcaption>
+					<p>Bubba likes to appear out of thin air.</p>
+					<a href="#">View more</a>
+				</figcaption>			
+			</figure>
+			<figure class="effect-bubba boost">
 				<a href="http://hashtagboost.com/"><img src="site_boost.jpg"></a>
-				<p>
-				<p id="work">
-					Business Analysis, Dev, QA
-				</p>
-				<p id="description" style="text-align: justify;">
-					Large project, including a backend. Worked closely with the client in the inicial planning/contract. Project involved learning NodeJS, Mongo DB, Amazon AWS Server.
-					Technologies: NodeJS, HTML, CSS, JS, etc...
-				</p>
-			</div>
+				<figcaption>
+					<p>Bubba likes to appear out of thin air.</p>
+					<a href="#">View more</a>
+				</figcaption>			
+			</figure>
 		</div>
+		
+		<hr>
 
 		<!--
 		   - Work Experience
 		   -->
-		<div class="row">
-			<hr>
-			<h1 style="text-align: center">Work Experience</h1>
-			<div class="col-lg-6" style="text-align:center">
+		<div class="row" id="div_work">
+			<h2 style="text-align: center">Work Experience</h2>
+			<div class="col l6" style="text-align:center">
 				<img src="work_audible2.png">
 				<p>
 				<p id="description">
 					CURRENTLY EMPLOYED.
 				</p>
 			</div>
-			<div class="col-lg-6" style="text-align:center">
+			<div class="col l6" style="text-align:center">
 				<img src="work_toll2.png">
 				<p>
 				<p id="work">
@@ -196,47 +282,67 @@
 			</div>
 		</div>
 
+		<hr>
 
 		<!--
 		   - Sample Projects
 		   -->
 		<div class="row">
-			<hr>
-			<h1 style="text-align: center">Sample Projects</h1>
-			<div class="col-lg-6" style="background-color: lightgreen; text-align:center">
+			<h2 style="text-align: center">Sample Projects</h2>
+			<div class="col l6" style="background-color: lightgreen; text-align:center">
 				<p>Palindrome</p>
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						Dropdown
-						<span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
-				</div>
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+
 			</div>
-			<div class="col-lg-6" style="background-color: lightblue; text-align:center">
+			<div class="col l6" style="background-color: lightblue; text-align:center">
 				<p>Timer</p>
 			</div>
 		</div>
+
+		<hr>
 
 		<!--
 		   - Interests
 		   -->
 		<div class="row">
-			<hr>
-			<h1 style="text-align: center">Interests</h1>
-			<div class="col-lg-6" style="background-color: lightgreen; text-align:center">
+			<h2 style="text-align: center">Interests</h2>
+			<div class="col l6" style="background-color: lightgreen; text-align:center">
 				<p>Entrepeneurs</p>
 				<p>Philadelphia Youth Entrepeneurs</p>
 			</div>
-			<div class="col-lg-6" style="background-color: lightgreen; text-align:center">
+			<div class="col l6" style="background-color: lightgreen; text-align:center">
 				<p>Photography</p>
 			</div>
 		</div>
+
+		<hr>
+
+		<div class="row">
+			<div class="col l12" style="text-align:center">
+				<h2 id="top">Contact Me</h2>
+			</div>
+			<div class="col l6">
+				<p>
+					(484)753-1924
+				</p>
+			</div>
+			<div class="col l6">
+				<p style="text-align: right; margin-bottom: 16px">
+					cms588@drexel.edu
+				</p>
+			</div>
+			<div id="map" style="text-align:center"></div>
+		</div>
+
+
 
 	</div>
 
