@@ -7,7 +7,8 @@
 	<title>CMS Portfolio</title>
   	
    	<link href="css_reset.css" rel="stylesheet">
-   	<link href="image_hover.css" rel="stylesheet">
+   	<link href="css/set1.css" rel="stylesheet">
+   	<link href="css/set2.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -59,6 +60,7 @@
     		margin-bottom: 45px
     	}
     	h1 {
+    		color: #FF7148;
     		margin: 0 0 0 0;
     		padding: 0 0 0 0;
     		font-size: 34px;
@@ -74,7 +76,7 @@
     	}
     	header {
     		text-align: center;
-    		background-color:#ff8a80;
+    		background-color:#C7D0D5;
     		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     	}
     	.menu {
@@ -90,28 +92,9 @@
 			box-shadow: none;
 			background-color: inherit;
 		}
+		.wrapper {width:70%; /*960/1640 = .58536585*/ margin:0 auto;}
+		.resize {width:100%; height:auto;}
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      	function initialize() {
-        	var mapCanvas = document.getElementById('map');
-        	var mapOptions = {
-          		center: new google.maps.LatLng(39.956537, -75.189947),
-          		zoom: 14,
-          		mapTypeId: google.maps.MapTypeId.ROADMAP
-        	}
-	        var map = new google.maps.Map(mapCanvas, mapOptions)
-      	}
-      	google.maps.event.addDomListener(window, 'load', initialize);
-
-
-		function myFunction(loc) {
-		    $('html,body').animate({
-		        scrollTop: $("#" + loc).offset().top
-		    },'slow');
-		}
-
-    </script>
 
 </head>
 <body style="background-color: #EDEDED !important">
@@ -120,16 +103,6 @@
 	<header class="header z-depth-1">
 		<a href="https://www.linkedin.com/in/spencercameron"><img src="portrait.jpg" class="circle responsive-img" style="width:175px; height:175px; margin:20px"></a>
 		<h1>Cameron Spencer</h1>
-
-		          		<p style="text-align: center">
-		          			<br>
-		          			"To improve is to change.
-		          			To be perfect is to change often."
-		          		</p>
-		          		<p style="text-align: center; margin-top: 10px">
-		          			-Winston Churchill
-		          		</p>
-
 		<nav role="navigation">
   			<div class="nav-wrapper container menu z-depth-0">
     			<ul>
@@ -144,108 +117,55 @@
 
 	<div class="container" style="margin-top:45px">
 
-		<!-- Profile -->
-		<div class="row">
-			<div class="col l4">
-				<h2 style="text-align:center">Education</h2>
-				<div style="margin-left: 25px; margin-right:25px">
-	          		<p style="text-align: center">
-						<img src="drexel.png" class="responsive-img" style="width:175px; height:175px; margin:20px">
-	          		</p>
-	          		<p id="pNoSpace">
-						Bachelor of Science in Computer Science
-					</p>
-					<p id="pNoSpace">
-						Anticipated Graduation 2018
-					</p>
-					<p>.
-					</p>
-					<p id="pNoSpace">
-						GPA:
-					</p>
-					<p id="pNoSpace">
-						Major: 3.37
-					</p>
-					<p id="pNoSpace">
-						Cumlative: 3.08
-					</p>
-				</div>
-			</div>
+		<div class="wrapper">
 			<div class="col l4" style="margin-top:">
 				<blockquote>
 					<p style="font-size:18px">
-				      	"Cameron is a quick learner, a team player and an exceptional individual contributor. He picked up all technologies very quickly- .NET , SQL or C# and produced positive results in a short time period."<br><br>
-				      	"Cameron also built good relationships at all levels and we had a couple of clients specially recognize Cameron for his initiative and related enhancements to software applications he worked on."<br><br>
-				      	<b>Vai Haridas<br>
-				      	IT Project Manager at Toll Brothers<b>
+				      	"Cameron is a quick learner, a team player and an exceptional individual contributor."<br><br>
+				      	<b>Vai Haridas</b>, IT Project Manager at Toll Brothers
 			      	</p>
 			    </blockquote>
 			</div>
-			<div class="col l4" style="margin-top:">
 
-				<h2 style="text-align:center">Current Employment</h2>
 
-				<div class="col s12">
-					<ul class="collapsible">
-						<li>
-							<div class="collapsible-header" onclick="myFunction('div_work')"><i class="large material-icons">work</i>Audible Inc.</div>
-							<p style="margin-left: 15px;font-size:15px; line-height: 1; margin-top:12px">Software Developement Engineer</p>
-							<ul style="margin-left: 45px; margin-top: 10px; font-size:15px; list-style-type:circle">
-								<li>
-									&bull; Mobile developement??
-								</li>
-							</ul>
-						</li>
-						<br>
-						<li>
-							<div class="collapsible-header" onclick="window.open('http://www.drexel.edu/about/overview/','_newtab');"><i class="large material-icons">assignment</i>Drexel University</div>
-							<p style="margin-left: 15px;font-size:15px; line-height: 1; margin-top:12px">Computer Science Student</p>
-							<ul style="margin-left: 45px; margin-top: 10px; font-size:15px; list-style-type:circle;">
-								<li>
-									&bull; Classes
-								</li>
-							</ul>
-						</li>
-						<br>
-						<li class="active">
-							<div class="collapsible-header" onclick="myFunction('div_freelance')"><i class="large material-icons">web</i>Freelance</div>
-							<p style="margin-left: 15px;font-size:15px; line-height: 1; margin-top:12px">Project Manager / Website Developer</p>
-							<ul style="margin-left: 45px; margin-top: 10px; font-size:15px; list-style-type:circle;">
-								<li>
-									&bull; Client Relations
-								</li>
-								<li>
-									&bull; Project Management
-								</li>
-								<li>
-									&bull; Freelance Vision
-								</li>
-							</ul>
-							<br>
-						</li>
-					</ul>
+				<div class="grid row">
+					<figure class="effect-julia">
+		 				<img src="tmp/e.jpg" />
+						<figcaption>
+							<h2><span>Drexel</span> University</h2>
+							<div>
+								<p>Bachelor of Science in Computer Science</p><br>
+								<p>Anticipated Graduation 2018</p><br>
+								<p>GPA Major: 3.37</p><br>
+								<p>GPA Cumlative: 3.08</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
 				</div>
-			</div>
 		</div>
+
+
 
 		<hr>
 
 
 		<div class="grid">
 			<figure class="effect-bubba attila">
-				<a href="http://attilatothfitness.com/home/"><img src="site_attila.jpg"></a>
+				<a href="http://attilatothfitness.com/home/"><img src="a.png"></a>
 				<figcaption>
 					<p>Bubba likes to appear out of thin air.</p>
 					<a href="#">View more</a>
 				</figcaption>			
 			</figure>
 			<figure class="effect-bubba etienne">
-				<a href="http://etiennemaurice.com/"><img src="site_etienne.jpg"></a>
+				<a href="http://etiennemaurice.com/"><img src="b.png"></a>
 				<figcaption>
 					<p>Bubba likes to appear out of thin air.</p>
 					<a href="#">View more</a>
 				</figcaption>			
 			</figure>
+			<!--
 			<figure class="effect-bubba boost">
 				<a href="http://hashtagboost.com/"><img src="site_boost.jpg"></a>
 				<figcaption>
@@ -253,13 +173,13 @@
 					<a href="#">View more</a>
 				</figcaption>			
 			</figure>
+			-->
 		</div>
-		
-		<hr>
 
 		<!--
 		   - Work Experience
 		   -->
+<!--
 		<div class="row" id="div_work">
 			<h2 style="text-align: center">Work Experience</h2>
 			<div class="col l6" style="text-align:center">
@@ -283,24 +203,19 @@
 		</div>
 
 		<hr>
+		   -->
+
+
+
 
 		<!--
 		   - Sample Projects
 		   -->
+<!--
 		<div class="row">
 			<h2 style="text-align: center">Sample Projects</h2>
 			<div class="col l6" style="background-color: lightgreen; text-align:center">
 				<p>Palindrome</p>
-    <a class="btn-floating btn-large red">
-      <i class="large material-icons">mode_edit</i>
-    </a>
-    <ul>
-      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></i></a></li>
-      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
-
 			</div>
 			<div class="col l6" style="background-color: lightblue; text-align:center">
 				<p>Timer</p>
@@ -308,10 +223,11 @@
 		</div>
 
 		<hr>
-
+-->
 		<!--
 		   - Interests
 		   -->
+<!--
 		<div class="row">
 			<h2 style="text-align: center">Interests</h2>
 			<div class="col l6" style="background-color: lightgreen; text-align:center">
@@ -325,21 +241,22 @@
 
 		<hr>
 
-		<div class="row">
-			<div class="col l12" style="text-align:center">
-				<h2 id="top">Contact Me</h2>
+
+			<div class="col l4" style="margin-top:">
+				<blockquote>
+					<p style="font-size:18px">
+				      	"Cameron is a quick learner, a team player and an exceptional individual contributor. He picked up all technologies very quickly- .NET , SQL or C# and produced positive results in a short time period."<br><br>
+				      	"Cameron also built good relationships at all levels and we had a couple of clients specially recognize Cameron for his initiative and related enhancements to software applications he worked on."<br><br>
+				      	<b>Vai Haridas<br>
+				      	IT Project Manager at Toll Brothers<b>
+			      	</p>
+			    </blockquote>
 			</div>
-			<div class="col l6">
-				<p>
-					(484)753-1924
-				</p>
-			</div>
-			<div class="col l6">
-				<p style="text-align: right; margin-bottom: 16px">
-					cms588@drexel.edu
-				</p>
-			</div>
-			<div id="map" style="text-align:center"></div>
+
+-->
+
+
+
 		</div>
 
 
