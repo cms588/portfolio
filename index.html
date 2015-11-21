@@ -18,7 +18,7 @@
 
    	<style>
    		.container {
-   			width: 75%;
+   			width: 85%;
    		}
    		html {
    			line-height: 1.5;
@@ -42,11 +42,6 @@
    		#education {
    			padding-bottom: 16px;
    		}
-      	#map {
-      		margin: 0 auto 0 auto;
-        	width: 85%;
-        	height: 225px;
-    	}
     	#work {
     		font-weight: bold;
     	}
@@ -94,6 +89,33 @@
 		}
 		.wrapper {width:70%; /*960/1640 = .58536585*/ margin:0 auto;}
 		.resize {width:100%; height:auto;}
+		#drexelimg {
+		    height: auto;
+		    max-width: 100%;
+		}
+		blockquote {
+		    text-align: center; 
+		    margin:0 auto;
+		    width:auto;
+		    display:table;
+		}
+		.hi {
+    width: 50%; margin: 0 auto;
+   }
+		.grid {
+			height: 100%;
+		}
+		.myrow {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		.nomargin {
+			width: 100%;
+		}
+		a {
+			color: black;
+		}
     </style>
 
 </head>
@@ -116,8 +138,7 @@
 
 
 	<div class="container" style="margin-top:45px">
-
-		<div class="wrapper">
+		<div class="">
 			<div class="col l4" style="margin-top:">
 				<blockquote>
 					<p style="font-size:18px">
@@ -128,41 +149,47 @@
 			</div>
 
 
-				<div class="grid row">
-					<figure class="effect-julia">
-		 				<img src="tmp/e.jpg" />
-						<figcaption>
-							<h2><span>Drexel</span> University</h2>
-							<div>
-								<p>Bachelor of Science in Computer Science</p><br>
-								<p>Anticipated Graduation 2018</p><br>
-								<p>GPA Major: 3.37</p><br>
-								<p>GPA Cumlative: 3.08</p>
-							</div>
-							<a href="#">View more</a>
-						</figcaption>			
-					</figure>
-				</div>
-		</div>
+			<div class="grid myrow hi" style="text-align:center;">
 
+				<figure class="effect-julia">
+
+	 				<a href="javascript:void(0);"><img id="dexelimg" src="tmp/e.jpg" /></a>
+					<figcaption>
+						<h2><span>Drexel</span> University</h2>
+						<div>
+							<p style="font-size:13px">Bachelor of Science in Computer Science</p><br>
+							<p style="font-size:13px">Anticipated Graduation 2018</p><br>
+							<p style="font-size:13px">GPA Major: 3.37</p><br>
+							<p style="font-size:13px">GPA Cumlative: 3.08</p><br>
+							<p style="font-size:13px"><a href="drexel.edu/">View more</a></p>
+						</div>
+						<!--<a href="#">View more</a>-->
+					</figcaption>
+		
+				</figure>
+
+
+
+			</div>
+		</div>
 
 
 		<hr>
 
 
-		<div class="grid">
-			<figure class="effect-bubba attila">
+		<div class="grid myrow nomargin hi">
+			<figure class="effect-bubba attila  col 6">
 				<a href="http://attilatothfitness.com/home/"><img src="a.png"></a>
 				<figcaption>
-					<p>Bubba likes to appear out of thin air.</p>
-					<a href="#">View more</a>
+					<p>World class body builder and model.</p>
+					<p><a href="attilatothfitness.com">Website</a></p>
 				</figcaption>			
 			</figure>
-			<figure class="effect-bubba etienne">
+			<figure class="effect-bubba etienne  col 6">
 				<a href="http://etiennemaurice.com/"><img src="b.png"></a>
 				<figcaption>
-					<p>Bubba likes to appear out of thin air.</p>
-					<a href="#">View more</a>
+					<p>Fill maker and entrepreneur.</p>
+					<p><a href="etiennemaurice.com">Website</a></p>
 				</figcaption>			
 			</figure>
 			<!--
